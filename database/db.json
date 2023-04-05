@@ -1,0 +1,66 @@
+{
+  "Producto": [
+    {
+      "nombre": "monitor LG 29SA1RL ",
+      "descripcion": "puertos VGA y HDMI",
+      "stock": 20,
+      "precio": 120,
+      "categoriaId": 1,
+      "id": 1
+    },
+    {
+      "nombre": "monitor PANASONIC TC-21GX30",
+      "descripcion": "monitor y television",
+      "stock": 3,
+      "precio": 275,
+      "categoriaId": 1,
+      "id": 2
+    },
+    {
+      "nombre": "Impresora epson EcoTank L3250",
+      "descripcion": "mutifuncional",
+      "stock": 3,
+      "precio": 254,
+      "categoriaId": 2,
+      "id": 3
+    },
+    {
+      "nombre": "impresora Canon PIXMA G3100",
+      "descripcion": "inalámbrica, multifuncional.",
+      "stock": 4,
+      "precio": 178,
+      "categoriaId": 2,
+      "id": 4
+    },
+    {
+      "nombre": "moden router Tp-link TD-W8961N",
+      "descripcion": "Módem Router Inalámbrico ADSL2+ N 300Mbps",
+      "stock": 17,
+      "precio": 165,
+      "categoriaId": 3,
+      "id": 5
+    }
+  ],
+  "Categoria": [
+    {
+      "id": 1,
+      "nombre": "monitor",
+      "descripcion": "insumos de computación"
+    },
+    {
+      "nombre": "impresora",
+      "descripcion": "articulo de escritorio",
+      "id": 2
+    },
+    {
+      "nombre": "router",
+      "descripcion": "artefactos de redes",
+      "id": 3
+    },
+    {
+      "nombre": "scaner",
+      "descripcion": "dispositivos para escaneo de archivos",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+
+  json-server:
+    container_name: json-server
+    build: ./frontedm8/database
+    ports:
+      - 5000:5000
+
+  frontend-dev:
+    container_name: frontend-api-dev
+    restart: always
+    build: ./frontedm8
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+      - 3303:3303
+    environment:
+      NODE_ENV: dev
+    depends_on:
+      - json-server
+
+  frontend-test:
+    container_name: frontend-api-test
+    restart: always
+    build: ./frontedm8
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      NODE_ENV: test
+    depends_on:
+      - json-server
+
+  frontend-prod:
+    container_name: frontend-api-prod
+    restart: always
+    build: ./frontedm8
+    ports: 
+      - 8086:80
+    environment:
+      NODE_ENV: prod
+    depends_on:
+      - json-server
+  
+
+      

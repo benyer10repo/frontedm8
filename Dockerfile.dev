@@ -1,0 +1,15 @@
+# etapa de compilación dev
+FROM node:lts-alpine as build-stage
+WORKDIR /frontedm8
+
+COPY package*.json /frontedm8
+RUN npm install -g @vue/cli
+RUN npm install -g json-server
+RUN npm install
+
+COPY . /frontedm8
+
+EXPOSE 3303
+CMD ["npm","run", "serve"]
+
+
