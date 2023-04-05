@@ -3,15 +3,15 @@ services:
 
   json-server:
     
-    build: ./frontedm8/database
+    build: ./database
     ports:
       - 5000:5000
 
   frontend-dev:
     
     restart: always
-    build: ./frontedm8
-      context: ./frontedm8
+    build: 
+      context: .
       dockerfile: Dockerfile.dev
     ports: 
       - 3303:3303
@@ -23,8 +23,8 @@ services:
   frontend-test:
     
     restart: always
-    build: ./frontedm8
-      context: ./frontedm8
+    build: 
+      context: .
       dockerfile: Dockerfile.test
     environment:
       NODE_ENV: test
@@ -34,7 +34,7 @@ services:
   frontend-prod:
     
     restart: always
-    build: ./frontedm8
+    build: .
     ports: 
       - 8086:80
     environment:

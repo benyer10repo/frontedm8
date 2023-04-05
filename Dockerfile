@@ -1,12 +1,12 @@
 FROM node:lts-alpine as build-stage
 WORKDIR /frontedm8
 
-COPY package*.json /frontedm8
+COPY package*.json ./
 RUN npm install -g @vue/cli
 RUN npm install -g json-server
 RUN npm install
 
-COPY . /frontedm8
+COPY . .
 
 RUN npm run build --prod
 
